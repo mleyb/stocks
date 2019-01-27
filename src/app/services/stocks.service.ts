@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { syntaxError } from '@angular/compiler';
 
 const stocks: Array<string> = ['AAPL', 'GOOG', 'FB', 'AMZN', 'TWTR'];
-const service = 'https://angular-2-in-action-api.herokuapp.com';
+const service = 'https://angular2-in-action-api.herokuapp.com';
 
 export interface Stock {
   symbol: string;
