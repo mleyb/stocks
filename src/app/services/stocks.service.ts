@@ -35,7 +35,7 @@ export class StocksService {
     }
   }
 
-  private getStocks() {
+  public getStocks() {
     return stocks.slice();
   }
 }
