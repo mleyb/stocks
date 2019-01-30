@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { StocksService, Stock } from "../../services/stocks.service";
 
 @Component({
-  selector: "dashboard",
+  selector: 'app-dashboard',
   templateUrl: "./dashboard.component.html",
   styleUrls: ["./dashboard.component.css"]
 })
