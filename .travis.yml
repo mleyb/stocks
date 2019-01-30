@@ -1,15 +1,18 @@
 language: node_js
 node_js:
-  - "9"
+- '9'
 dist: trusty
 sudo: required
 branches:
   only:
   - master
 before_script:
-  - npm install -g @angular/cli
+- npm install -g @angular/cli
 script:
-  - ng lint
-  #- npm run test-headless
-  #- npm run e2e
-  - ng build --prod
+- ng lint
+- ng build --prod
+deploy:
+  provider: heroku
+  api_key:
+    secure: XhYDoyB/EqHx2YgPeGQiMy4cx10Ent6JIY48W4LSmzcoqmD9ou3HFl33EmMXHoGM9/756MrmVZDrtUw49viTQx7vBoFx0z4tlh/VDJZvEamq3Fo2iZ+yoRQ51JU1PO5F8b0y/iJiQG6swa7qCk+HettUGGT8ktsJ3Ex7PncemA3TfuGnTLgPMCWnLfJe8RnpXylJQprKjndXZzoQC5UrBjHpzIx+aVIEUeNkKniRA8X1JUe3W8Z/ONnfHcNQWmefHjeDfCO0APh8l35MdL16/8WA4vbSqqDcBqDwF2HLF5354i5vaJQUxmscvHe4VNeVZQYDthwEVbc3WFEkEeUg6V1AObP66xh6nqNl8Y2bycenxWZKJ20uswmD5mVqH6b+fjZ+o3ZZIKAamW92IsMvCyMStaUTwPNAUWSW12P9F1CgdE4FYu+BQo7UB57JjtcAviGh2Sl8ajiukrLaOY4Ytp5KC2hBvZkgmycBXW2mXFSLzgcEn+a7ztC/3swvNgyucROAzbpvX46YLsdTwOSpyzdwNoMfPMy+JDV5if8mJrHSg5HX1reE1eNMH4xCVu7faOW8+rGwsrcT1f4GSdlzAw0HQbdLjqKAr1bMa3pViF+/bs+KxEnxj0UUGHxPo6Jxrs4LkS0hn5aHfr9ame8E8SxustGCG0RcCFAZpUCemEk=
+  app: lunchsoft-stocks
